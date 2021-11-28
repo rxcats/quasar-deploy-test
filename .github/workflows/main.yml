@@ -24,6 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@main
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: 16.x
     
       - name: Deploy to gh-pages
         uses: Daniele-Tentoni/quasar-vue-gh-pages-deploy@0.1.0
